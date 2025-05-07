@@ -18,7 +18,7 @@ mvn archetype:generate \
   -Dpackage=cn.iocoder.yudao.module.${artifactId} \
   -DartifactId=<module-name> \
   -DmoduleDescription="<模块描述>" \
-  -DinitialErrorCode=<错误码起始段，如1>
+  -DinitialErrorCode=<错误码起始段，如010>
 ```
 
 例如：
