@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 https://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd"
+        name="yudao-module-archetype">
+    <requiredProperties>
+        <requiredProperty key="moduleDescription">
+            <defaultValue>示例模块</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="groupId">
+            <defaultValue>cn.iocoder.yudao</defaultValue> <!-- 覆盖基于 groupId 的默认包路径 -->
+        </requiredProperty>
+        <requiredProperty key="artifactId">
+            <defaultValue>example</defaultValue> <!-- 默认模块名 -->
+        </requiredProperty>
+        <requiredProperty key="package">
+            <defaultValue>cn.iocoder.yudao.module.${artifactId}</defaultValue> <!-- 覆盖基于 groupId 的默认包路径 -->
+        </requiredProperty>
+        <requiredProperty key="initialErrorCode">
+            <defaultValue>1</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+
+    <fileSets>
+        <!-- Parent POM -->
+        <fileSet filtered="true" packaged="false">
+            <directory></directory>
+            <includes>
+                <include>pom.xml</include>
+            </includes>
+        </fileSet>
+
+        <!-- API Module -->
+        <fileSet filtered="true" packaged="false">
+            <directory>yudao-module-__rootArtifactId__-api</directory>
+            <includes>
+                <include>pom.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true">
+            <directory>yudao-module-__rootArtifactId__-api/src/main/java</directory>
+            <includes>
+                <include>**/*.java</include>
+            </includes>
+        </fileSet>
+
+        <!-- BIZ Module -->
+        <fileSet filtered="true" packaged="false">
+            <directory>yudao-module-__rootArtifactId__-biz</directory>
+            <includes>
+                <include>pom.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true">
+            <directory>yudao-module-__rootArtifactId__-biz/src/main/java</directory>
+            <includes>
+                <include>**/*.java</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true">
+            <directory>yudao-module-__rootArtifactId__-biz/src/test/java</directory>
+            <includes>
+                <include>**/*.java</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory>yudao-module-__rootArtifactId__-biz/src/main/resources</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</archetype-descriptor> 
