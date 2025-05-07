@@ -18,7 +18,7 @@
             <defaultValue>cn.iocoder.yudao.module.${artifactId}</defaultValue> <!-- 覆盖基于 groupId 的默认包路径 -->
         </requiredProperty>
         <requiredProperty key="initialErrorCode">
-            <defaultValue>1</defaultValue>
+            <defaultValue>010</defaultValue>
         </requiredProperty>
     </requiredProperties>
 

@@ -5,6 +5,7 @@
     <parent>
         <groupId>cn.iocoder.boot</groupId>
         <artifactId>yudao</artifactId>
+        <!--作为模块被启用时，这里会被自动替换为parent实际的版本号-->
         <version>${revision}</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
